@@ -1,4 +1,4 @@
-=== Woo Age Checkbox | Beta ===
+=== Age Checkbox for-Woocommerce  ===
 Contributors: @betacore
 Tags: age check, woocommerce, checkout
 Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKgWQ3qGgxg_t6VUUmSU6B2H1hUcANUBzhX5xV0qg2G&country.x=NL&locale.x=NL
@@ -28,6 +28,7 @@ In the wp-admin bar go to Woocommerce > settings and you will find the settings 
 == Screenshots ==
 1. The plugin in action!
 2. The settings page.
+3. Oops! Tick the box!
 
 == Changelog ==
 = 0.95 =

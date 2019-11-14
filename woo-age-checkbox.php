@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name:       Age Checkbox For Woocommerce | Beta
- * Plugin URI:        https://betacore.tech
+ * Plugin Name:       Age Checkbox for-Woocommerce
+ * Plugin URI:        https://betacore.tech/age-checkbox-for-woocommerce
  * Description:       Do your users have to comply to age regulations before ordering? This plugin adds a checkbox that has to be ticked before placing an order.
  * Version:           0.95
  * Author:            Betacore
@@ -22,10 +22,10 @@ function bcWOAG_age_policy_form() {
         woocommerce_form_field( 'age_policy', array(
            'type'          => 'checkbox',
            'class'         => array('form-row-age-policy'),
-           'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox', 'woocommerce-extra-fancy-box-for-age-check'),
+           'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox', 'woocommerce-age-check'),
            'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
            'required'      => true,
-           'label'         => __(get_option( 'woocommerce_betawooage_checkboxemessage' ),"betawooage")
+           'label'         => get_option( 'woocommerce_betawooage_checkboxemessage' )
         )); 
     }
 }
@@ -36,8 +36,8 @@ add_action( 'woocommerce_checkout_process', 'bcWOAG_not_approved_age' );
    
 function bcWOAG_not_approved_age() {
     if(get_option( 'woocommerce_betawooage_checkbox' )=='yes'){
-        if ( ! (int) strlen(isset( $_POST['privacy_policy'] ),1) ) { 
-            wc_add_notice( __(get_option( 'woocommerce_betawooage_failuremessage' ),"betawooage"), 'error' );
+        if ( ! (int) isset( $_POST['age_policy'] ) ) { 
+            wc_add_notice( get_option( 'woocommerce_betawooage_failuremessage' ), 'error' );
         }
     }
 }
@@ -64,7 +64,7 @@ function bcWOAG_form_wpadmin( $settings ) {
         'default'  => 1,  // WC >= 2.0
         'desc'     => __( "Display a mandatory checkbox.", 'betawooage' ),
       );
-        if(get_option( 'woocommerce_betawooage_checkbox' )=='yes'){
+
          $updated_settings[] = array(
             'name'     => __( 'Checkbox message', 'betawooage' ),
             'id'       => 'woocommerce_betawooage_checkboxemessage',
@@ -83,7 +83,7 @@ function bcWOAG_form_wpadmin( $settings ) {
             'default'  => __( "<strong>Please confirm that you are 18 years or older</strong> by ticking the box.", 'betawooage' ),  // WC >= 2.0
             'desc'     => __( "Display message to people that don't tick the box.", 'betawooage' ),
           );
-        }
+       
     }
 
     $updated_settings[] = $section;
