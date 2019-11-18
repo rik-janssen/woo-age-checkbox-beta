@@ -48,14 +48,14 @@ add_filter( 'woocommerce_general_settings', 'bcWOAG_form_wpadmin' );
 
 function bcWOAG_form_wpadmin( $settings ) {
 
-  $updated_settings = array();
+  $newsettings = array();
 
   foreach ( $settings as $section ) {
 
     // at the bottom of the General Options section
     if ( isset( $section['id'] ) && 'general_options' == $section['id'] &&
        isset( $section['type'] ) && 'sectionend' == $section['type'] ) {
-      $updated_settings[] = array(
+      $newsettings[] = array(
         'name'     => __( 'Enable age checkbox', 'betawooage' ),
         'id'       => 'woocommerce_betawooage_checkbox',
         'type'     => 'checkbox',
@@ -65,7 +65,7 @@ function bcWOAG_form_wpadmin( $settings ) {
         'desc'     => __( "Display a mandatory checkbox.", 'betawooage' ),
       );
 
-         $updated_settings[] = array(
+         $newsettings[] = array(
             'name'     => __( 'Checkbox message', 'betawooage' ),
             'id'       => 'woocommerce_betawooage_checkboxemessage',
             'type'     => 'textarea',
@@ -74,7 +74,7 @@ function bcWOAG_form_wpadmin( $settings ) {
             'default'  => __( "You have to be 18 years or older to order products at this webshop. By checking this box you confirm that you are 18 years or older.", 'betawooage' ),  // WC >= 2.0
             'desc'     => __( "Display the text people see before ticking the box.", 'betawooage' ),
           );
-         $updated_settings[] = array(
+         $newsettings[] = array(
             'name'     => __( 'Failure message', 'betawooage' ),
             'id'       => 'woocommerce_betawooage_failuremessage',
             'type'     => 'textarea',
@@ -86,10 +86,10 @@ function bcWOAG_form_wpadmin( $settings ) {
        
     }
 
-    $updated_settings[] = $section;
+    $newsettings[] = $section;
   }
 
-  return $updated_settings;
+  return $newsettings;
     
 }
 
