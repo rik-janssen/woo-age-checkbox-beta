@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKg
 Requires at least: 5.1
 Tested up to: 5.3
 Requires PHP: 7.1
-Stable tag: 0.95
+Stable tag: 1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,9 @@ In the wp-admin bar go to Woocommerce > settings and you will find the settings 
 3. Oops! Tick the box!
 
 == Changelog ==
+= 1.0 =
+* New artwork <3
+
 = 0.95 =
 * Wordpress 5.3 ready and tested
 * Final version pulled from an existing website I've built and packaged it for the Wordpress repo.
