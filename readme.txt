@@ -1,11 +1,11 @@
 === Age Checkbox for-Woocommerce  ===
 Contributors: @betacore
 Tags: age check, woocommerce, checkout
-Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKgWQ3qGgxg_t6VUUmSU6B2H1hUcANUBzhX5xV0qg2G&country.x=NL&locale.x=NL
-Requires at least: 5.1
-Tested up to: 5.3
+Donate link: https://www.patreon.com/betadev
+Requires at least: 5.2
+Tested up to: 5.4
 Requires PHP: 7.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

@@ -4,11 +4,9 @@
  * Plugin Name:       Age Checkbox for-Woocommerce
  * Plugin URI:        https://betacore.tech/plugins/age-checkbox-for-woocommerce/
  * Description:       Do your users have to comply to age regulations before ordering? This plugin adds a checkbox that has to be ticked before placing an order.
- * Version:           1.0
+ * Version:           1.0.1
  * Author:            Rik Janssen (Beta)
  * Author URI:        https://betacore.tech
- * License:           
- * License URI:       
  * Text Domain:       betawooage
  * Domain Path:       /lang
  */
@@ -98,8 +96,8 @@ function bcWOAG_form_wpadmin( $settings ) {
 function bcWOAG_pl_links( $links ) {
 
 	$links = array_merge( array(
-		'<a href="' . esc_url( 'https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKgWQ3qGgxg_t6VUUmSU6B2H1hUcANUBzhX5xV0qg2G&country.x=NL&locale.x=NL' ) . '">' . __( 'Donate', 'betawooage' ) . '</a>'
-    ), $links );
+		'<a href="' . esc_url( 'https://www.patreon.com/betadev' ) . '">' . __( 'Patreon', 'betawooage' ) . '</a>'
+	), $links );
     
 	return $links;
 }
