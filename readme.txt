@@ -3,9 +3,9 @@ Contributors: @betacore
 Tags: age check, woocommerce, checkout
 Donate link: https://www.patreon.com/betadev
 Requires at least: 5.2
-Tested up to: 5.4
+Tested up to: 5.6
 Requires PHP: 7.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
